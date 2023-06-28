@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+{% block body %}
+    <div class="col-md-4 offset-md-4">  
+        <div class="card card-body">
+            <form action="/update/{{ contact.0 }}" method="POST">
+                <div class="form-group">
+                    <input type="text" name="fullname" placeholder="Digita el nombre completo" value="{{ contact.1 }}" class="form-control">
+                </div>
+
+                <div class="form-group"> 
+                    <input type="text" name="phone" placeholder="Digita numero de telefono" value="{{ contact.2 }}" class="form-control">
+                </div> 
+
+                <div class="form-group">
+                    <input type="text" name="email" placeholder="Digita el correo electronico" value="{{ contact.3 }}" class="form-control">
+                </div>
+                
+                <div class="form-group">
+                    <button type='submit' class="btn btn-primary btn-success btn-block">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}
